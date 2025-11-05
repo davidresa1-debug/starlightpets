@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starlight Pets</title>
+  <title>Starlight Pets 🐾</title>
+
+  <!-- 🌟 Favicon (logo en la pestaña del navegador) -->
+  <link rel="icon" type="image/png" href="starlightpets.png">
+
   <style>
     body {
       margin: 0;
@@ -12,46 +16,39 @@
       background: radial-gradient(circle at top, #ffe8c2, #ffd3a3, #ffbe76);
       color: #3a2e1f;
       overflow-x: hidden;
+      text-align: center;
     }
 
     header {
-      text-align: center;
-      padding: 50px 20px 20px;
+      background-color: #ffd39a;
+      padding: 30px;
+      font-size: 2.2em;
+      font-weight: bold;
+      border-bottom: 4px solid #ffb86c;
     }
 
-    header h2 {
-      font-size: 1.8em;
-      color: #e67e22;
-      text-shadow: 0 0 6px #ffcb91;
-      margin-bottom: 15px;
-    }
-
-    header img {
-      width: 200px;
-      border-radius: 50%;
-      box-shadow: 0 0 25px rgba(255, 193, 94, 0.8);
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: 2.8em;
-      color: #d35400;
-      text-shadow: 0 0 8px #ffe5b4;
+    section {
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 20px;
+      background-color: #fff5e6;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
 
     h2 {
-      color: #d35400;
-      text-shadow: 0 0 6px #ffd19a;
+      color: #ff914d;
     }
 
-    p {
-      line-height: 1.7;
-      text-align: justify;
-      font-size: 17px;
+    footer {
+      background-color: #ffd39a;
+      padding: 20px;
+      font-weight: bold;
+      border-top: 4px solid #ffb86c;
     }
 
-    /* Botón de WhatsApp flotante */
-    .whatsapp-fijo {
+    /* 📱 Botón flotante de WhatsApp */
+    .whatsapp-button {
       position: fixed;
       bottom: 25px;
       right: 25px;
@@ -63,150 +60,101 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       text-decoration: none;
-      animation: latido 2s infinite;
-      transition: transform 0.3s, box-shadow 0.3s;
-      z-index: 999;
+      transition: transform 0.3s ease;
+      z-index: 1000;
     }
 
-    .whatsapp-fijo:hover {
+    .whatsapp-button:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 30px rgba(37, 211, 102, 0.9);
     }
 
-    @keyframes latido {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.15); }
+    .whatsapp-icon {
+      width: 40px;
+      height: 40px;
     }
 
-    .whatsapp-fijo img {
-      width: 35px;
-      height: 35px;
+    audio {
+      display: none;
     }
 
-    section {
-      width: 85%;
-      max-width: 850px;
-      margin: 50px auto;
-      background-color: rgba(255, 255, 255, 0.6);
-      border-radius: 25px;
-      padding: 40px;
-      box-shadow: 0 0 20px rgba(255, 193, 94, 0.4);
-      text-align: center;
-    }
-
-    .telefono {
-      font-size: 20px;
-      color: #27ae60;
-      font-weight: bold;
-      text-shadow: 0 0 5px #a8e6cf;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 10px;
-      color: #5a4636;
-      font-size: 15px;
-      border-top: 1px solid rgba(0,0,0,0.1);
-      margin-top: 60px;
-      background: rgba(255, 255, 255, 0.4);
-    }
-
-    footer strong {
-      color: #d35400;
-    }
-
-    /* Estrellas sutiles */
-    .estrella {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: #fff3e0;
+    img.logo {
+      margin-top: 25px;
+      width: 200px;
       border-radius: 50%;
-      animation: brillar 3s infinite ease-in-out;
-    }
-
-    @keyframes brillar {
-      0%, 100% { opacity: 0.3; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.3); }
+      border: 3px solid #ffb86c;
+      background-color: #fff8eb;
+      padding: 10px;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Estrellitas -->
-  <div class="estrella" style="top:10%; left:15%; animation-delay:0s;"></div>
-  <div class="estrella" style="top:20%; left:60%; animation-delay:1s;"></div>
-  <div class="estrella" style="top:50%; left:30%; animation-delay:2s;"></div>
-  <div class="estrella" style="top:70%; left:80%; animation-delay:1.5s;"></div>
-  <div class="estrella" style="top:90%; left:10%; animation-delay:2.5s;"></div>
+  <!-- 🐾 Encabezado -->
+  <header>🐾 Amor en cada patita 🐾</header>
 
-  <!-- Audio de fondo -->
-  <audio autoplay loop>
-    <source src="sonidos/aves.mp3" type="audio/mpeg">
-    <source src="sonidos/ronroneo.mp3" type="audio/mpeg">
-  </audio>
+  <!-- 🐾 Logo -->
+  <img src="starlightpets.png" alt="Logo Starlight Pets" class="logo">
 
-  <header>
-    <h2>🐾 Amor en cada patita 🐾</h2>
-    <img src="starlight pets.png" alt="Logo de Starlight Pets">
-    <h1>Starlight Pets</h1>
-  </header>
-
+  <!-- 🐾 Sección: Quiénes somos -->
   <section>
     <h2>¿Quiénes somos?</h2>
     <p>
-      Starlight Pets es un hogar de mascotas destinado a ofrecer amor, seguridad y bienestar a animales que viven en la calle o que han sido maltratados. 
-      Nos encargamos de brindarles atención médica, refugio y una segunda oportunidad para ser felices. 
-      Aquí, cada mascota es tratada con respeto, cariño y la dedicación que merece.
+      Starlight Pets es un hogar de mascotas destinado a la comodidad y seguridad de los animales que viven en la calle y han sido maltratados.
+      Prestamos servicios como jornadas de vacunación, esterilización y jornadas de adopción.
+      <br><br>
+      Todas nuestras campañas son <strong>completamente gratuitas</strong>.
     </p>
   </section>
 
+  <!-- 🐾 Sección: Objetivo -->
   <section>
     <h2>Nuestro objetivo</h2>
     <p>
-      Nuestro objetivo es ofrecer la mayor comodidad posible a gatos, perros y animales exóticos como aves, cuyes y tortugas. 
-      Trabajamos para crear conciencia sobre el maltrato animal y promover una cultura de respeto y amor hacia todos los seres vivos.  
-      Cada campaña, cada rescate y cada adopción reflejan nuestro compromiso por un mundo mejor para los animales.
+      Nuestro objetivo es brindar la mayor comodidad tanto a gatos como perros y otros animales exóticos como aves, cuyes o tortugas.
+      También buscamos concientizar a las personas sobre el maltrato que estos animales han sufrido,
+      para que quienes los adopten comprendan la importancia del respeto y el amor hacia ellos.
     </p>
   </section>
 
-  <section>
-    <h2>Campañas gratuitas</h2>
-    <p>
-      Todas nuestras campañas son completamente <strong>GRATIS</strong>.  
-      Ofrecemos jornadas de vacunación, esterilización, desparasitación y adopción sin ningún costo.  
-      Creemos que ayudar no debería tener precio y que todos los animales merecen la oportunidad de recibir cuidados médicos y un hogar digno.
-    </p>
-  </section>
-
+  <!-- 🐾 Sección: Fundador -->
   <section>
     <h2>Nuestro fundador</h2>
     <p>
-      Mi nombre es <strong>David Restrepo Salas</strong>, y soy el fundador de Starlight Pets.  
-      Desde pequeño sentí una profunda conexión con los animales, y decidí crear este proyecto para ofrecerles un refugio donde sean amados y respetados.  
-      Mi sueño es que cada animal tenga una nueva oportunidad, un hogar seguro y personas que los valoren como parte de su familia.
+      Hola, mi nombre es <strong>David Restrepo Salas</strong>.<br>
+      Mi objetivo es darle una nueva oportunidad de vida a los animales que más lo necesitan.
     </p>
   </section>
 
+  <!-- 🐾 Sección: Contacto -->
   <section>
-    <h2>Contáctanos</h2>
-    <p>
-      Si deseas más información sobre nuestras campañas, adopciones o cómo apoyar a Starlight Pets, puedes comunicarte con nosotros.
-    </p>
-    <p class="telefono">📞 Contáctanos para más información: 3117838366</p>
+    <h2>📞 Contáctanos</h2>
+    <p>Para más información: <strong>311 783 8366</strong></p>
   </section>
 
+  <!-- 🐾 Footer -->
   <footer>
-    © 2025 <strong>Starlight Pets</strong> — Todos los derechos reservados.<br>
+    © 2025 Starlight Pets — Todos los derechos reservados.<br>
     Creado con amor por <strong>David Restrepo Salas</strong> 🐶🐱
   </footer>
 
-  <!-- Botón flotante de WhatsApp -->
-  <a class="whatsapp-fijo" href="https://wa.me/573117838366" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  <!-- 🐾 Botón flotante de WhatsApp -->
+  <a href="https://wa.me/573117838366" class="whatsapp-button" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon" alt="WhatsApp">
   </a>
+
+  <!-- 🕊️ Sonidos de fondo -->
+  <audio autoplay loop>
+    <source src="sonidos/aves.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio autoplay loop>
+    <source src="sonidos/ronroneo.mp3" type="audio/mpeg">
+  </audio>
 
 </body>
 </html>
+
+
